@@ -47,4 +47,16 @@ router.get('/awesome', async (ctx) => {
 	obj: meta });
 });
 
+// http://127.0.0.1:3000/helpers
+router.get('/helpers', async (ctx) => {
+	const names = ['Steve', 'John', 'Peter', 'Jack', 'István'];
+	const randomName = names[Math.floor(Math.random() * names.length)];
+
+	ctx.body = await index({
+		welcome: `${randomName}!!!`, // Use template literals in router like helpers
+		num: 2,
+	}, {
+	obj: meta });
+});
+
 module.exports = router;
