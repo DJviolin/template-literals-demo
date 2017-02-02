@@ -7,7 +7,7 @@ module.exports = ({ obj }) => `
 	<title>${obj.title}</title>
 	<meta name="description" content="${obj.description}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/css/style.css">
 	</head>
 	<body>
 	<!--[if lte IE 9]>
