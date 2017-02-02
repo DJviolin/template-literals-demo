@@ -5,19 +5,21 @@ const router = new Router();
 // Viewing
 const index = require('../views/index');
 
+const meta = {
+	title: 'Template Literals',
+	description: 'Vanilla JS rendering',
+};
+
 // http://127.0.0.1:3000/
 router.get('/', async (ctx) => {
 	ctx.body = await index({
 		welcome: 'User',
 		num: 2,
 	}, {
-	obj: {
-		title: 'Template Literals',
-		description: 'Vanilla JS rendering',
-	} });
+	obj: meta });
 });
 
-// http://127.0.0.1:3000/hello/lanti?num=123
+// http://127.0.0.1:3000/hello/steve?num=27
 router.get('/hello/:id', async (ctx) => {
 	ctx.state = {
 		id: ctx.params.id,
@@ -27,10 +29,20 @@ router.get('/hello/:id', async (ctx) => {
 		welcome: ctx.state.id,
 		num: ctx.state.num,
 	}, {
-	obj: {
-		title: 'Template Literals',
-		description: 'Vanilla JS rendering',
-	} });
+	obj: meta });
+});
+
+// http://127.0.0.1:3000/awesome
+router.get('/awesome', async (ctx) => {
+	ctx.state = {
+		id: ctx.params.id,
+		num: parseInt(ctx.query.num, 10),
+	};
+	ctx.body = await index({
+		welcome: ctx.state.id,
+		num: ctx.state.num,
+	}, {
+	obj: meta });
 });
 
 module.exports = router;

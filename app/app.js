@@ -34,7 +34,8 @@ if (process.env.NODE_ENV !== 'production') {
 }
 debugLog('process.env.NODE_ENV = %s', process.env.NODE_ENV);
 
-// Templating - Must be used before any router
+// Templating setup - Must be used before any router
+// Thanks to template literals, this part not needed
 
 // Routes
 app.use(index.routes(), index.allowedMethods());

@@ -6,7 +6,7 @@ module.exports = (state, { obj }) => main(`
 	<!-- Add your site or application content here -->
 	<p>Hello world! This is HTML5 Boilerplate.</p>
 
-	<p>Numeric addition test: ${state.num} + ${state.num} = ${state.num + state.num}</p>
+	<p>Numeric addition test: ${state.num} * ${state.num} = ${state.num * state.num}</p>
 
 	<p>Full object: ${JSON.stringify(state, null, 4)}</p>
 `,
