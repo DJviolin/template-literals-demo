@@ -6,38 +6,31 @@ const router = new Router();
 const index = require('../views/index');
 
 // http://127.0.0.1:3000/
-router.get('/', (ctx) => {
-	/*ctx.state = {
-		//session: this.session,
-		title: 'app',
-	};
-	await ctx.render('index', {
-		//title: 'Koa',
-	});*/
-
-	ctx.body = index({
-		welcome: 'Welcome',
-		foo: 'bar',
+router.get('/', async (ctx) => {
+	ctx.body = await index({
+		welcome: 'User',
 		num: 2,
-		num1: 2,
-		num2: 3,
 	}, {
 	obj: {
 		title: 'Template Literals',
 		description: 'Vanilla JS rendering',
 	} });
-
 });
 
 // http://127.0.0.1:3000/hello/lanti?num=123
-/*router.get('/hello/:id', async (ctx) => {
+router.get('/hello/:id', async (ctx) => {
 	ctx.state = {
-		//session: this.session,
-		title: ctx.params.id,
-		number: ctx.query.num,
+		id: ctx.params.id,
+		num: parseInt(ctx.query.num, 10),
 	};
-	ctx.body = await { hello: ctx.state.title, querystring: ctx.state.number };
-	//ctx.body = 'Hello, World!';
-});*/
+	ctx.body = await index({
+		welcome: ctx.state.id,
+		num: ctx.state.num,
+	}, {
+	obj: {
+		title: 'Template Literals',
+		description: 'Vanilla JS rendering',
+	} });
+});
 
 module.exports = router;
