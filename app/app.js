@@ -61,4 +61,5 @@ app.on('error', (err, ctx) => {
 	debugErr('server error', err, ctx);
 });
 
-app.listen(3000);
+//app.listen(3000);
+module.exports = app;
