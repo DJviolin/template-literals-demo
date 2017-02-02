@@ -40,7 +40,7 @@ router.get('/awesome', async (ctx) => {
 
 	ctx.body = await index({
 		welcome: `
-			<span style="color: #f00;">${json.name}<span>!
+			<span style="color: #f00;">${json.name}</span>!
 		`,
 		num: 2,
 	}, {
