@@ -1,0 +1,39 @@
+{
+  "name": "template-literals-demo",
+  "version": "1.0.0",
+  "description": "Template literals as viewing engine demo app",
+  "main": "./app/index",
+  "scripts": {
+    "start": "node --harmony_async_await ./app/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">= 7.0.0"
+  },
+  "author": "István Lantos <kerozin.joe@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-es2017-node7": "^0.4.1",
+    "babel-register": "^6.22.0",
+    "debug": "^2.6.0",
+    "koa": "^2.0.0-alpha.7",
+    "koa-bodyparser": "^3.2.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^7.0.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.0"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {
+    "eslint": "^3.13.0",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-babel": "^4.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
+    "htmlhint": "^0.9.13",
+    "postcss": "^5.2.11",
+    "stylelint": "^7.7.1",
+    "stylus": "^0.54.5"
+  }
+}
