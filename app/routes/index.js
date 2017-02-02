@@ -53,7 +53,7 @@ router.get('/helpers', async (ctx) => {
 	const randomName = names[Math.floor(Math.random() * names.length)];
 
 	ctx.body = await index({
-		welcome: `${randomName}!!!`, // Use template literals in router like helpers
+		welcome: `${randomName}!!!`, // Use TL in a router like if it was a helper
 		num: 2,
 	}, {
 	obj: meta });
