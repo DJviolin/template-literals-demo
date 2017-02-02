@@ -2,9 +2,9 @@ const htmlHead = require('../components/htmlHead');
 const htmlBottom = require('../components/htmlBottom');
 
 module.exports = (content, { obj }) => `
-${htmlHead({ obj })}
+	${htmlHead({ obj })}
 
-${content}
+	${content}
 
-${htmlBottom()}
+	${htmlBottom()}
 `;

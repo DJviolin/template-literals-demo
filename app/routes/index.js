@@ -16,6 +16,7 @@ router.get('/', (ctx) => {
 	});*/
 
 	ctx.body = index({
+		welcome: 'Welcome',
 		foo: 'bar',
 		num: 2,
 		num1: 2,
