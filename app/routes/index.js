@@ -34,13 +34,15 @@ router.get('/hello/:id', async (ctx) => {
 
 // http://127.0.0.1:3000/awesome
 router.get('/awesome', async (ctx) => {
-	ctx.state = {
-		id: ctx.params.id,
-		num: parseInt(ctx.query.num, 10),
+	const json = {
+		name: 'Mr. Awesome',
 	};
+
 	ctx.body = await index({
-		welcome: ctx.state.id,
-		num: ctx.state.num,
+		welcome: `
+			<span style="color: #f00;">${json.name}<span>!
+		`,
+		num: 2,
 	}, {
 	obj: meta });
 });
