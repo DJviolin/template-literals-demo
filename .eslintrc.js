@@ -10,9 +10,10 @@ module.exports = {
 
 	//"parser": "babel-eslint", // https://www.npmjs.com/package/babel-eslint
 	//"parser": "eslint-plugin-babel", // https://www.npmjs.com/package/eslint-plugin-babel
-	"plugins": [
-		"babel",
-	],
+	"parser": "babel-eslint",
+  "plugins": [
+    "babel",
+  ],
 
 	//"extends": "eslint:recommended",
 	//"extends": "airbnb", // With React
@@ -32,7 +33,7 @@ module.exports = {
 
 	parserOptions: {
 		ecmaVersion: 6,
-		sourceType: 'module', // "script" or "module"
+		sourceType: 'script', // "script" or "module"
 		ecmaFeatures: {
 			jsx: true,
 			generators: true,
