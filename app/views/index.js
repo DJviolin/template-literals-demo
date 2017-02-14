@@ -1,6 +1,7 @@
 'use strict';
 
 const main = require('./layouts/frontend');
+const loop = require('./components/loop');
 
 module.exports = (state, { obj }) => main(`
   <h1>Welcome ${state.welcome}</h1>
